@@ -1,0 +1,20 @@
+@charset "utf-8";
+/*
+Theme Name: Wakakusastreet
+Description: 若草通商店街ホームページ用テンプレート
+Version: 1.0-20170930
+Author: MakotoOtsuka
+Author URI: http://www.wakakusa-st.jp/
+*/
+
+/* header */
+
+#header-content {
+  width:100%;
+  position: relative;
+
+}
+
+#header-menu ul {
+  text-decoration:none;
+}
