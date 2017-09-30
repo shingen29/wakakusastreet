@@ -1,0 +1,88 @@
+cms_contents_style_for_desktop()
+  h3
+    margin 32px 0
+    font-size 24px
+    line-height 40px
+
+    &:first-child
+      margin-top 0
+
+  img
+    max-width 100%
+    height auto
+    margin-top 32px
+    margin-bottom 32px
+
+    &:first-child
+      margin-top 0
+
+    &:last-child
+      margin-top 0
+
+  .caption
+    margin -16px 0 32px
+    font-size 13px
+    line-height 24px
+
+  p
+    margin-bottom 1em
+
+  ul
+  ol
+    margin 32px 0
+
+  h4 + ul,
+  h4 + ol
+    margin-top 0
+
+cms_contents_style_for_mobile()
+  h3
+    margin 24px 0
+    font-size 14px
+    line-height 24px
+
+    &:first-child
+      margin-top 0
+
+  img
+    max-width 100%
+    height auto
+    margin-top 24px
+    margin-bottom 24px
+
+    &:first-child
+      margin-top 0
+
+    &:last-child
+      margin-top 0
+
+  .caption
+    margin -16px 0 24px
+    font-size 10px
+    line-height 16px
+
+  p
+    margin-bottom 1em
+
+  ul
+  ol
+    margin 24px 0
+
+  h4 + ul,
+  h4 + ol
+    margin-top 0
+
+screen(min = null, max = null)
+  if min
+    if max
+      @media (min-width: min) and (max-width: max)
+        {block}
+    else
+      @media (min-width: min)
+        {block}
+  else
+    if max
+      @media (max-width: max)
+        {block}
+    else
+      {block}

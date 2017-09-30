@@ -1,0 +1,32 @@
+align-items(val)
+  -webkit-align-items val
+  align-items val
+
+display(val)
+  if val is 'flex'
+    display '-webkit-%s' % val
+    display val
+  else
+    display val
+
+flex-direction(val)
+  -webkit-flex-direction val
+  flex-direction val
+
+flex-wrap(val)
+  -webkit-flex-wrap val
+  flex-wrap val
+
+justify-content(val)
+  -webkit-justify-content val
+  justify-content val
+
+order(val)
+  -webkit-order val
+  order val
+
+user-select(val)
+  -webkit-user-select val
+  -moz-user-select val
+  -ms-user-select val
+  user-select val

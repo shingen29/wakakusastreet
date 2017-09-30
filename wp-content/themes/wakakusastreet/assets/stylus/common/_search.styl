@@ -1,0 +1,43 @@
+div.page-menu
+  border-radius 3px
+  background white
+  margin-bottom horizontal_padding_small
+  padding horizontal_padding_small horizontal_padding_medium
+  display flex
+  flex-wrap wrap
+  align-items center
+
+  div.menu-title
+    margin-right horizontal_padding_small
+  
+  div.menu-value
+    margin-right horizontal_padding_medium
+
+    select
+      height 34px
+      border 1px solid light_purple_gray
+      border-radius 3px
+      background white
+      padding 5px 10px
+    
+  button
+  a.menu-btn
+    color white
+    border-radius 3px
+    background dull_purple
+    margin-right horizontal_padding_mini
+    padding 5px horizontal_padding_medium
+    cursor pointer
+
+    &:hover
+      opacity 0.9
+    
+    &:last-child
+      margin-right 0
+
+  div.alert-message
+    width 100%
+    color red
+    font-weight bold
+    margin-top 8px
+    display none

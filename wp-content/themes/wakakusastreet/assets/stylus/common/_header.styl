@@ -1,0 +1,152 @@
+side_menu_width = 200px
+
+header_background = #151515
+header_menu_link_color = #abb3aa
+header_menu_link_hover_color = #a1d84c
+
+side_menu_link_color = #97ca47
+side_menu_on_link_color = #92b953
+
+/** Header **/
+header
+  margin horizontal_padding_small
+
+  .title
+    text-align center
+
+  .menu
+    margin-top horizontal_padding_small
+
+  section#logo
+    width side_menu_width
+    background header_background
+
+  i
+    font-size 40px
+
+  section#list
+    width "calc(100% - %s)" % side_menu_width
+    display flex
+
+    ul
+      display flex
+
+      li
+        a
+          color header_menu_link_color
+          font-size 30px
+          border-right 1px solid #545454
+          padding 20px 25px
+          display inline-block
+
+          &:hover
+            color header_menu_link_hover_color
+            background #252525
+
+    div.user
+      color pale_blue_gray
+      margin-left auto
+      margin-right 10px
+
+      a.user-logout
+        margin-left horizontal_padding_mini
+
+  div#need-login
+    color pale_blue_gray
+    padding 0 25px
+
+
+/** Side Menu **/
+section#side-menu
+  top 70px
+  left 0
+  width side_menu_width
+  height calc(100vh - 70px)
+  background dark_navy
+  position fixed
+  z-index 3
+
+  a
+    height 60px
+    line-height 60px
+    color header_menu_link_color
+    text-decoration none
+    padding-left horizontal_padding_medium
+    display block
+
+    i
+      font-size 16px
+      margin-right 5px
+
+  ul
+    position relative
+
+    &.on
+      a
+        color pale_blue_gray
+        background side_menu_on_link_color
+
+      li:first-child:after
+        content ''
+        top 28px
+        right 0
+        width 0
+        height 0
+        border solid transparent horizontal_padding_mini
+        border-right-color body_background
+        margin -8px 0 0 0
+        position absolute
+        pointer-events none
+
+      div.sub-menu
+        background side_menu_on_link_color
+        padding-bottom 15px
+        position static
+
+      div.sub-menu a
+        height 40px
+        line-height 40px
+
+      li.on a
+        color white
+        font-weight bold
+
+    &:hover
+      li:first-child a
+      div.sub-menu a
+        color white
+        background side_menu_link_color
+        opacity 1
+
+      a:after
+        content ''
+        right 0
+        bottom -30px
+        width 0
+        height 0
+        border-left 30px solid transparent
+        border-top 30px solid transparent
+        position absolute
+        z-index 4
+
+    &.on:hover
+      li:first-child a
+      div.sub-menu a
+        color white
+        background side_menu_on_link_color
+
+    div.sub-menu
+      top 0
+      left side_menu_width
+      width side_menu_width
+      position absolute
+      display none
+
+    &.on div.sub-menu
+    &:hover div.sub-menu
+      display block
+
+    &:hover
+      div.sub-menu
+        a:hover
+          background header_menu_link_hover_color

@@ -1,0 +1,388 @@
+.button
+  position relative
+  user-select none
+  cursor pointer
+
+  .fa-chevron-left
+  .fa-chevron-right
+  .fa-chevron-down
+    position absolute
+    margin-top 8px
+
+  .fa-chevron-left
+    left 24px
+
+  .fa-chevron-right
+  .fa-chevron-down
+    right 24px
+
+.button.disabled
+  cursor default
+
+.field
+  label
+  input
+  textarea
+  select
+    color dark_navy 
+
+  label
+  select
+  input[type=file]
+    cursor pointer
+
+  input[type=text]
+  input[type=email]
+  input[type=password]
+  input[type=tel]
+  textarea
+    padding 8px 16px
+    border-radius 10px
+
+  select
+    padding 8px 12px
+    background #fff
+
+  textarea
+    resize vertical
+
+  input[type=text][disabled]
+  input[type=email][disabled]
+  input[type=password][disabled]
+  input[type=tel][disabled]
+  select[disabled]
+  textarea[disabled]
+    color light_purple_gray
+    cursor not-allowed
+
+  .with-errors
+    label
+      color red
+
+  .error-message
+    margin-top 8px
+    color red
+
+  &.file-field
+    .error-message
+      margin-top -8px
+
+  &.checkbox-field
+    input[type=checkbox]
+    label
+      display inline-block
+      width auto
+
+    label
+      padding 8px 16px
+
+  .preview
+  .preview img
+    display block
+
+  .preview
+    img
+      width 100%
+      height auto
+
+.actions
+  .button
+    position relative
+
+    &:hover
+      opacity .87
+
+    &:active
+      box-shadow 0 0 999px 0 rgba(0, 0, 0, .1) inset
+
+    .fa
+      position absolute
+
+.flash
+  margin 0 auto
+  border-radius 4px
+  background white
+  text-align center
+
+.success
+  border 1px solid blue
+  color blue
+
+.failed
+  border 1px solid red
+  color red
+
+#form-error-message
+  color red
+
+#input-error
+  margin-bottom horizontal_padding_large
+
+  div.title
+    color red
+    font-size 14px
+    font-weight bold
+    border-radius 3px
+    background white
+    margin-bottom horizontal_padding_medium
+    padding 10px 20px
+
+  li
+    color red
+    border-radius 3px
+    background danger
+    margin-bottom 8px
+    padding 8px 20px
+
+form
+  section.form
+  div.form
+    border 1px solid light_purple_bold
+    box-shadow 2px 2px 2px rgba(0,0,0,0.05)
+    background white
+    padding horizontal_padding_medium * 2
+
+    dl
+      display flex
+      flex-wrap wrap
+
+      dt
+        width 20%
+        font-weight bold
+        text-align center
+        border-bottom 1px solid light_purple
+        padding 16px 0
+
+      dd
+        width 80%
+        border-bottom 1px solid light_purple
+        padding 16px 0
+        
+        div.item
+          border-left 4px solid pale_blue_gray
+          padding-left 32px
+
+          &.need-mark
+            border-color pink
+
+          p
+            font-size 12px
+
+          input
+          textarea
+          select
+            width 100%
+            line-height 2
+            border 1px solid light_purple_bold
+            background light_gray
+            padding 0 horizontal_padding_mini
+
+            &:focus
+              border-color faavo_color
+              background white
+
+          input
+          select
+            height 35px
+
+          select
+            width 50%
+
+          textarea
+            height 200px
+            padding 10px horizontal_padding_mini
+
+          input[type="file"]
+            display none
+
+          button.select-file
+            color white
+            border-radius 3px
+            background emerald
+            margin-bottom horizontal_padding_mini
+            padding horizontal_padding_mini horizontal_padding_large
+            cursor pointer
+
+            &:hover
+              opacity 0.9
+
+          div.preview-file
+            max-width 300px
+            max-height 300px
+            background white
+            margin-top horizontal_padding_small
+            overflow hidden
+            display none
+            
+            &.on
+              display block
+
+            img
+              width 100%
+              max-width 100%
+
++screen(null, device_max_width_phone)
+  .field
+    margin-bottom horizontal_padding_medium
+
+    label
+    input
+    textarea
+    select
+      font-size 13px
+      line-height 24px
+
+    label
+    input[type=text]
+    input[type=email]
+    input[type=password]
+    input[type=tel]
+    input[type=file]
+    textarea
+    select
+      display block
+      width 100%
+
+    select
+      height 36px
+
+    label
+      margin-bottom 4px
+
+  &.file-field
+    .preview
+      margin-top 8px
+
+  .actions
+    .button
+      display block
+      width 100%
+
+      .fa
+        right 16px
+        margin-top 4px
+
+  #form-error-message
+    margin-bottom 16px
+
+  .error-message
+    font-size 10px
+    line-height 16px
+
+  .flash
+    font-size 14px
+    padding 8px
+    margin-bottom 36px
+
+
++screen(device_max_width_phone + 1px)
+  label_width = 160px
+
+  .field
+    display flex
+    margin-bottom 24px
+
+    &:last-child
+      margin 0
+
+    label
+    input
+    textarea
+    select
+      font-size 16px
+      line-height horizontal_padding_large
+
+    label
+      padding 8px 0
+
+  .field > label
+    width label_width
+
+  .field > input[type=text]
+  .field > input[type=email]
+  .field > input[type=password]
+  .field > input[type=tel]
+  .field > input[type=file]
+  .field > textarea
+  .field > select
+    width 'calc(100% - %s)' % label_width
+
+  input[type=file]
+    padding 8px 0
+    line-height 1
+
+  .field
+    .with-errors:first-child
+      width label_width
+
+      label
+        display block
+        width 100%
+
+  .field
+    .with-errors
+      width 'calc(100% - %s)' % label_width
+
+      label
+        display block
+
+      input[type=text]
+      input[type=email]
+      input[type=password]
+      input[type=tel]
+      input[type=file]
+      textarea
+      select
+        width 100%
+
+  &.file-field
+    .preview
+      margin-top -8px
+
+  &.checkbox-field
+    margin-top -16px
+
+    input[type=checkbox]
+      height 48px
+
+  .actions
+    input[type=button]
+    input[type=submit]
+    button
+      font-size 16px
+      line-height horizontal_padding_large
+
+    .button
+      .fa
+        margin-top 8px
+        right 40px
+
+  #form-error-message
+    margin-bottom 24px
+
+  .preview
+    width 200px
+    margin-left label_width
+
+  .error-message
+    margin-left label_width
+    font-size 13px
+    line-height 24px
+
+  .flash
+    font-size 16px
+    padding 12px
+    margin-bottom 48px
+
++screen(device_max_width_phone + 1px, device_max_width_tablet)
+  label_width = 160px
+
+  .field
+    input[type=text]
+    input[type=email]
+    input[type=password]
+    input[type=tel]
+    input[type=file]
+    textarea
+    select
+      width 'calc(100% - %s)' % label_width
