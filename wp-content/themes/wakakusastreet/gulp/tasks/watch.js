@@ -9,6 +9,7 @@ gulp.task('watch', function () {
         gulp.start(['webpack']);
     });
 */
+
     // styl
     watch(config.styl, function () {
         gulp.start(['stylus']);
