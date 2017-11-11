@@ -11,7 +11,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo do_shortcode('[js]') ?>/slick/slick.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="<?php echo do_shortcode('[js]') ?>/slick/slick-theme.css" media="screen" />
     <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <script src="<?php echo do_shortcode('[js]') ?>/slick/slick.min.js"></script>
 <!--
     <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
     <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
@@ -31,8 +34,15 @@
             </div>
           </div>
         </div>
+        <div id="eyecatch" class="center-item">
+          <img src="<?php echo do_shortcode('[img]') ?>/IMG_7731.jpg">
+          <img src="<?php echo do_shortcode('[img]') ?>/IMG_7800.jpg">
+          <img src="<?php echo do_shortcode('[img]') ?>/IMG_9015.jpg">
+          <img src="<?php echo do_shortcode('[img]') ?>/IMG_9038.jpg">
+          <img src="<?php echo do_shortcode('[img]') ?>/IMG_9046.jpg">
+        </div>
         <nav id="global-nav">
-          <ul>
+          <ul class="flex">
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">トップ</a></li>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">商店街について</a></li>
             <li><a href="<?php echo esc_url( home_url( '/shoplist' ) ); ?>">お店一覧</a></li>

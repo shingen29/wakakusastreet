@@ -720,9 +720,6 @@ section#side-menu ul:hover div.sub-menu a:hover {
 }
 #global-nav ul {
   list-style: none;
-  position: absolute;
-  right: 0;
-  bottom: 0;
   font-size: 14px;
 }
 #global-nav ul li {
@@ -731,6 +728,14 @@ section#side-menu ul:hover div.sub-menu a:hover {
 }
 #global-nav ul li a {
   padding: 0 30px;
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 #global-nav ul li:after {
   position: absolute;
@@ -805,6 +810,12 @@ section#side-menu ul:hover div.sub-menu a:hover {
 }
 #nav-toggle span:nth-child(3) {
   top: 22px;
+}
+#eyecatch {
+  margin: 50px 0 50px;
+}
+#eyecatch img {
+  width: 100%;
 }
 @media screen and (max-width: 640px) {
   #top-head,
@@ -889,5 +900,11 @@ section#side-menu ul:hover div.sub-menu a:hover {
 /* #global-nav top + #mobile-head height */
     -webkit-transform: translateY(556px);
     transform: translateY(556px);
+  }
+  #eyecatch {
+    margin: 0;
+  }
+  .flex {
+    display: block;
   }
 }

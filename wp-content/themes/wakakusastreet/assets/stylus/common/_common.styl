@@ -52,9 +52,6 @@
 }
 #global-nav ul {
     list-style: none;
-    position: absolute;
-    right: 0;
-    bottom: 0;
     font-size: 14px;
 }
 #global-nav ul li {
@@ -65,6 +62,10 @@
     padding: 0 30px;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  }
 /* Btn Hover */
 #global-nav ul li:after {
   position: absolute;
@@ -148,6 +149,12 @@
     top: 22px;
 }
 
+#eyecatch {
+  margin: 50px 0 50px;
+  }
+#eyecatch img {
+  width: 100%;
+  }
 @media screen and (max-width: 640px) {
     #top-head,
     .inner {
@@ -238,5 +245,13 @@
         -moz-transform: translateY(556px);
         -webkit-transform: translateY(556px);
         transform: translateY(556px);
+    }
+
+    #eyecatch {
+      margin: 0;
+    }
+
+    .flex {
+      display: block;
     }
 }

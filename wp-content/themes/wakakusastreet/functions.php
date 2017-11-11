@@ -75,6 +75,22 @@ function register_post_type_and_taxonomy() {
 }
 
 function my_scripts() {
-    wp_enqueue_script( 'main_script', get_bloginfo( 'stylesheet_directory') . '/main.js', array(), false, true );
+    wp_enqueue_script( 'main_script', get_bloginfo( 'stylesheet_directory') . '/assets/js/main.js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts');
+
+function shortcode_images() {
+ob_start();
+bloginfo('template_directory');
+$td .= ob_get_clean();
+return $td."/images";
+}
+add_shortcode('img', 'shortcode_images');
+
+function shortcode_javascript() {
+ob_start();
+bloginfo('template_directory');
+$td .= ob_get_clean();
+return $td."/assets/js";
+}
+add_shortcode('js', 'shortcode_javascript');
