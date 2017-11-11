@@ -20,7 +20,8 @@
     "require-dir": "^0.3.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watchStylus": "gulp watch"
   },
   "author": "",
   "license": "ISC"
