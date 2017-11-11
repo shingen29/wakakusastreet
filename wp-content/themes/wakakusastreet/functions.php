@@ -73,3 +73,8 @@ function register_post_type_and_taxonomy() {
   );
 
 }
+
+function my_scripts() {
+    wp_enqueue_script( 'main_script', get_bloginfo( 'stylesheet_directory') . '/assets/js/main.js', array(), false, true );
+}
+add_action( 'wp_enqueue_scripts', 'my_scripts');
